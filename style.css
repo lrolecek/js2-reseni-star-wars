@@ -1,0 +1,125 @@
+/* moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/* základní styly */
+body {
+  font: 16px/1.5 sans-serif;
+  margin: 0;
+  padding: 1em;
+  background-color: #6e6e6e;
+  color: #ffffff;
+  font-family: 'Jura', sans-serif;
+  font-weight: 500;
+}
+
+.droids {
+  display: block;
+  margin: 20px auto;
+  width: 350px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+#films {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.film {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  font-size: 20px;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.film:hover {
+  transform: scale(1.1);
+}
+
+.film:hover .film__episode,
+.film:hover .film__data {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.film__episode {
+  flex: 0 0 40px;
+  margin-right: 10px;
+  padding: 10px 0;
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.film__data {
+  flex-grow: 1;
+  display: flex;
+  padding: 10px 25px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+}
+
+.film__name {
+  flex: 0 0 45%;
+  font-weight: 700;
+}
+
+.film__year {
+  flex: 0 0 20%;
+  text-align: center;
+}
+
+.film__director {
+  flex: 0 0 35%;
+}
+
+.sort-buttons {
+  max-width: 700px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.button {
+  flex: 1 1 25%;
+  background-color: #444;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 6px 15px;
+  text-align: center;
+  border-radius: 15px;
+  border: 0;
+  outline: 0;
+}
+
+.button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #000;
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+.error {
+  font-size: 20px;
+  line-height: 1;
+  padding: 10px 25px;
+  background-color: #fff;
+  color: #ff4400;
+  border-radius: 20px;
+}
